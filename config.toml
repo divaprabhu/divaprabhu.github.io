@@ -1,0 +1,83 @@
+baseURL = "https://prabhu.gq"
+title = "तेजस्वि नावधीतमस्तु"
+theme = "hugo-theme-fuji"
+enableEmoji = true
+enableRobotsTXT = true
+disableKinds = ["taxonomy"]
+ignoreErrors = ["error-disable-taxonomy"]
+
+languageCode = "en"  # For RSS, view https://www.rssboard.org/rss-language-codes
+defaultContentLanguage = "en"  # For HTML page, now support: en, zh-hans, zh-hant, ja, nl
+
+summaryLength = 100 # Custom summary length, add <!--more--> in post file to custom split point
+paginate = 10
+
+# googleAnalytics = "UA-000000000-0" # Set your Google Analytics UA here
+
+[outputFormats]
+  [outputFormats.SearchIndex]
+    isPlainText = true
+    notAlternative = true
+    mediaType = "application/json"
+    path = "/search/"
+
+[outputs]
+  home = ["HTML", "RSS", "SearchIndex"]
+
+[permalinks]
+#  post = "/:section/:filename/" # Custom post links, e.g. "/:year/:month/:title/"
+   post = "/:section/:year/:month/:title/"
+
+[params]
+  author = "Divakar V Prabhu" # You can also set author in post front matter individually
+  subTitle = "Unix and Programming"
+
+  copyrightStartYear = "2020"
+
+  # Open Graph & Twitter Card variables
+  # You can also set description and images in post front matter individually
+  description = "Unix and Programming"
+  images = ["img/og.png"] # This will use the image called og.png in static/img folder
+
+  # Posts shown in homepage
+  mainSections = ["post"]
+
+  # Bangumi image chart id
+  # bgmImageChart = "000000"
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true  # Enable user to embed HTML snippets in Markdown content
+  [markup.highlight]
+    codeFences = false  # Disable Hugo's code highlighter
+
+  [markup.tableOfContents]
+    startLevel = 2
+    endLevel = 3
+
+[taxonomies]
+  tag = "tags"
+
+[menu]
+  [[menu.nav]]
+    name = "Home"
+    url = "/"
+    weight = 1
+  [[menu.nav]]
+    name = "About"
+    url = "/about/"
+    weight = 2
+  [[menu.nav]]
+    name = "RSS"
+    url = "/index.xml"
+    weight = 3
+
+  [[menu.link]]
+    name = "GitLab"
+    url = "https://gitlab.com/divaprabhu"
+    weight = 1
+  [[menu.link]]
+    name = "Twitter"
+    url = "https://twitter.com/divaprabhu"
+    weight = 2
