@@ -1,6 +1,6 @@
 ---
 layout: post
-date: 2020-12-04
+date: 2020-12-11
 title: Setting up WireGuard on OpenBSD
 tags: ["wireguard", "openbsd"]
 ---
