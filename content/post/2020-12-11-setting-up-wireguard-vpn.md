@@ -109,13 +109,13 @@ To connect an OpenBSD client, we instead generate a hostname.if(5) file and then
 Next we build a hostname.if(5) file. At the beginning there is a 5s sleep. This is to make sure my wireless connection in laptop is up and running and can resolve the end point during system reboot. The gateway ip is your current networks gateway, if your on home network behind a router you can put your router's ip here.
 
 ```
-		echo '! echo "Connecting to VPN..." && sleep 5' > OpenBSD/hostname.wg0
-		echo 'up' >> OpenBSD/hostname.wg0
-		echo "wgkey $(cat OpenBSD/private.key)" >> OpenBSD/hostname.wg0
-		echo "wgpeer $(cat server/public.key) wgendpoint my.domain.name 443 wgaip 0.0.0.0/0" >> OpenBSD/hostname.wg0
-		echo "inet 10.0.0.3" >> OpenBSD/hostname.wg0
-		echo "! route add -priority 2 my.domain.name 192.168.0.1" >> OpenBSD/hostname.wg0
-		echo "! route add -priority 7 default 10.0.0.1" >> OpenBSD/hostname.wg0
+	echo '! echo "Connecting to VPN..." && sleep 5' > OpenBSD/hostname.wg0
+	echo 'up' >> OpenBSD/hostname.wg0
+	echo "wgkey $(cat OpenBSD/private.key)" >> OpenBSD/hostname.wg0
+	echo "wgpeer $(cat server/public.key) wgendpoint my.domain.name 443 wgaip 0.0.0.0/0" >> OpenBSD/hostname.wg0
+	echo "inet 10.0.0.3" >> OpenBSD/hostname.wg0
+	echo "! route add -priority 2 my.domain.name 192.168.0.1" >> OpenBSD/hostname.wg0
+	echo "! route add -priority 7 default 10.0.0.1" >> OpenBSD/hostname.wg0
 ```
 Copy this file to your laptop and run "doas sh /etc/netstart" and you should see your machine connected to VPN.
 
