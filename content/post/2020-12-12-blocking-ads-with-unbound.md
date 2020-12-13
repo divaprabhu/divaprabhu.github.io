@@ -95,5 +95,5 @@ The trick is to build a series of local-zone clauses with no corresponding local
 I had to set the timeout to 60 instead of default 30 that was resulting in failure of unbound startup.
 
 ## Reference
-1. [Tumfatig](https://www.tumfatig.net/wp-content/uploads/2019/04/unbound-adhosts.tx://www.tumfatig.net/wp-content/uploads/2019/04/unbound-adhosts.txt)
+1. [Tumfatig](https://www.tumfatig.net/wp-content/uploads/2019/04/unbound-adhosts.txt)
 2. [unbound.conf(5)](https://man.openbsd.org/unbound.conf)
