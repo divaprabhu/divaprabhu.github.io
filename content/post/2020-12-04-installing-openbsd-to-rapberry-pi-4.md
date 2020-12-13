@@ -58,4 +58,4 @@ This is a three part series where I will explain how I setup my Raspberry Pi4 as
 Install OpenBSD to the USB drive. Install the sets either from network or from USB. Once you reboot into your newly installed system and update the WiFI firmware for your adapter if needed
 
 ## Reference
-1. [OpenBSD/arm64 installation instructions] (https://ftp.openbsd.org/pub/OpenBSD/6.8/arm64/INSTALL.arm64)
+1. [OpenBSD/arm64 installation instructions](https://ftp.openbsd.org/pub/OpenBSD/6.8/arm64/INSTALL.arm64)
