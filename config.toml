@@ -1,4 +1,4 @@
-baseURL = "https://divaprabhu.gitlab.io"
+baseURL = "https://divaprabhu.github.io"
 title = "तेजस्वि नावधीतमस्तु"
 theme = "hugo-theme-fuji"
 enableEmoji = true
@@ -74,10 +74,10 @@ paginate = 10
     weight = 3
 
   [[menu.link]]
-    name = "GitLab"
-    url = "https://gitlab.com/divaprabhu"
+    name = "GitHub"
+    url = "https://github.com/divaprabhu"
     weight = 1
   [[menu.link]]
-    name = "Twitter"
-    url = "https://twitter.com/divaprabhu"
+    name = "Mastodon"
+    url = "https://mastodon.social/@divaprabhu"
     weight = 2
